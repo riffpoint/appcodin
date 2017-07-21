@@ -1,0 +1,101 @@
+public class AttachmentUtils {
+
+    public static long calculateSize(List<Attachment> attachedFiles) {
+        long result = 0;
+        if (attachedFiles != null) {
+            for (Attachment attach : attachedFiles) {
+                result += attach.getSize();
+            }
+        }
+        return result;
+    }
+
+    public static synchronized boolean isAllowToAttachFile(Uri uri, List<Attachment> attachedFiles,  long totalAttachmentSize)
+            throws CannotFetchFileException, OutOfAvailableAttachmentSizeException, DuplicateException {
+
+        long nSize = FileUtils.getFileSizeFromUri(Mail2WorldApplication.getAppContext(), uri);
+        if (nSize == -1) {
+            throw new CannotFetchFileException();
+        } else if (nSize > AppConstants.FIXED_TOTAL_ATTACHMENTS_SIZE_MB) {
+            throw new OutOfAvailableAttachmentSizeException();
+        }
+        String strName = FileUtils.getFileNameFromUri(Mail2WorldApplication.getAppContext(), uri);
+        if (!TextUtils.isEmpty(strName)) {
+            if (isDuplicate(strName, attachedFiles)) {
+                throw new DuplicateException();
+            }
+        } else {
+            throw new CannotFetchFileException();
+        }
+
+        long totalSize = totalAttachmentSize + nSize;
+        if (totalSize > AppConstants.FIXED_TOTAL_ATTACHMENTS_SIZE_MB) {
+            throw new OutOfAvailableAttachmentSizeException();
+        }
+        return true;
+    }
+
+    public static boolean isDuplicate(String strFileName, List<Attachment> attachedFiles) {
+        if (attachedFiles != null) {
+            for (Attachment attach : attachedFiles) {
+                if (TextUtils.equals(attach.getOriginalFileName(), strFileName)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static SpannableStringBuilder prepareAttachmentTitle(long totalSize, int attachmentsCount){
+        SpannableStringBuilder title = new SpannableStringBuilder();
+        title.append(Long.toString(attachmentsCount)).append(" ");
+        if (attachmentsCount > 1) {
+            title.append(Mail2WorldApplication.getAppContext().getString(R.string.files));
+        } else {
+            title.append(Mail2WorldApplication.getAppContext().getString(R.string.file));
+        }
+        title.append(" - ").append(Utils.getHumanReadableFileSize(totalSize));
+
+        if (title.length() > 0) {
+            if (totalSize > AppConstants.FIXED_TOTAL_ATTACHMENTS_SIZE_MB) {
+                title.setSpan(new ForegroundColorSpan(Color.RED), 0, title.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            } else {
+                int normalStateColor = Mail2WorldApplication.getAppContext().getResources().getColor(R.color.msg_preview_attachment_title_text_color);
+                title.setSpan(new ForegroundColorSpan(normalStateColor), 0, title.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            }
+        }
+        return title;
+    }
+
+    public static Intent openFile(Attachment item, String parentMessageId) {
+        if (com.m2w_sync.ToolsAndConstants.AttachmentUtils.isAttachmentPicture(Mail2WorldApplication.getAppContext(), item)) {
+            Intent intent = new Intent(Mail2WorldApplication.getAppContext(), ViewerActivity.class);
+            intent.putExtra(ViewerActivity.EXTRA_KEY_ATTACHMENT_POSITION, 0);
+            intent.putExtra(ViewerActivity.EXTRA_KEY_LOCAL_ATTACHMENT_ID, item.getLocalId());
+            intent.putExtra(ViewerActivity.EXTRA_KEY_OPEN_SINGLE_ATTACHMENT, true);
+            return intent;
+        } else {
+
+            Uri uri = AttachmentHelper.getUriFromAttachmentFile(Mail2WorldApplication.getAppContext(), parentMessageId, item.getOriginalFileName());
+            //Uri uri = Uri.parse(item.getLocalURIPath());
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            String strExtension = android.webkit.MimeTypeMap.getFileExtensionFromUrl(uri.toString());
+            String strMimetype = android.webkit.MimeTypeMap.getSingleton().getMimeTypeFromExtension(strExtension);
+            if (strExtension.equalsIgnoreCase("") || strMimetype == null) {
+                // if there is no extension or there is no definite mimetype, still try to open the file
+                intent.setDataAndType(uri, item.getMimeType());
+            } else {
+                intent.setDataAndType(uri, strMimetype);
+            }
+            List<ResolveInfo> resInfoList =
+                    Mail2WorldApplication.getAppContext().getPackageManager()
+                            .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+
+            for (ResolveInfo resolveInfo : resInfoList) {
+                String packageName = resolveInfo.activityInfo.packageName;
+                Mail2WorldApplication.getAppContext().grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            }
+            return intent;
+        }
+    }
+}

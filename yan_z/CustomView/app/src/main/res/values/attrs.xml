@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInput">
+        <attr name="header" format="string" />
+        <attr name="placeHolder" format="string" />
+        <attr name="defaultValue" format="string" />
+        <attr name="caseSensivity" format="enum" >
+            <enum name="UPPER_CASE" value="0"/>
+            <enum name="LOWER_CASE" value="1"/>
+            <enum name="NONE" value="2"/>
+        </attr>
+        <attr name="regexValue" format="enum" >
+            <enum name="O_TURKISH_LOWER_CASE" value="0"/>
+            <enum name="TO_TURKISH_UPPER_CASE" value="1"/>
+            <enum name="TURKISH_CHARACTERS" value="2"/>
+            <enum name="EMAIL" value="3"/>
+            <enum name="EMAIL_CHARACTERS" value="4"/>
+            <enum name="NUMERIC" value="5"/>
+            <enum name="NUMERIC_WITH_SPACES" value="6"/>
+            <enum name="NUMERIC_VALUE" value="7"/>
+            <enum name="ALPHANUMERIC" value="8"/>
+            <enum name="ALPHANUMERIC_WITH_SPACES" value="9"/>
+            <enum name="ALPHABETIC" value="10"/>
+            <enum name="ENGLISH_ALPHANUMERIC" value="11"/>
+            <enum name="ENGLISH_ALPHABETIC" value="12"/>
+            <enum name="GENERAL_CARD_NUMBER" value="13"/>
+            <enum name="AMERICAN_EXPRESS_CARD_NUMBER" value="14"/>
+            <enum name="TURKISH_MOBILE_PHONE" value="15"/>
+            <enum name="TURKISH_PHONE_GENERAL" value="16"/>
+            <enum name="PASSWORD" value="17"/>
+        </attr>
+        <attr name="maxLength" format="integer" />
+        <attr name="minLength" format="integer" />
+        <attr name="clearIcon" format="boolean" />
+        <attr name="maskValue" format="boolean" />
+        <attr name="allowTypeCopyPast" format="boolean" />
+        <attr name="enable" format="boolean" />
+    </declare-styleable>
+</resources>

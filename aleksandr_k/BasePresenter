@@ -1,0 +1,19 @@
+public class BasePresenter implements IBasePresenter{
+
+    protected final Context mContext;
+    protected final CompositeSubscription mCompositeSubscription;
+
+    public BasePresenter() {
+        mContext = App.getAppContext();
+        mCompositeSubscription = new CompositeSubscription();
+    }
+
+    protected void addSubscription(Subscription subscription) {
+        mCompositeSubscription.add(subscription);
+    }
+
+    @Override
+    public void onDestroy() {
+        mCompositeSubscription.clear();
+    }
+}

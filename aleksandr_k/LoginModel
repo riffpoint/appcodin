@@ -1,0 +1,76 @@
+public class EmailEntranceModel extends BaseModel implements IEmailEntranceModel {
+
+    private static final String TAG = EmailEntranceModel.class.getSimpleName();
+
+    public EmailEntranceModel() {
+        super();
+    }
+
+    @Override
+    public Observable<UserId> sendAuthorizeRequest(String email, String password) {
+        final LoginHelper helper = new LoginHelper();
+        return helper.authorizationRequestResponse(email, password)
+                .flatMap(new Func1<Response<AuthorizationAnswer>, Observable<UserId>>() {
+                    @Override
+                    public Observable<UserId> call(Response<AuthorizationAnswer> response) {
+                        if (!response.isSuccessful()) {
+                            return checkErrorAndThrowException(response);
+                        } else {
+                            AuthorizationAnswer answer = response.body();
+                            if (answer == null) {
+                                return Observable.error(new RuntimeException(
+                                        mContext.getString(R.string.error) + " failed upon get access token"));
+                            }
+                            updatePreferenceStore(answer);
+                            return prepareAuthorizeObserver(answer, helper);
+
+                        }
+                    }
+                })
+                .compose(this.<UserId>applySchedulers());
+    }
+
+    private Observable<UserId> prepareAuthorizeObserver(AuthorizationAnswer answer, LoginHelper helper) {
+        return helper.verifyTokenAndGetUserIdRequest(answer.getAccessToken(), "Custom")
+                .map(new Func1<Response<UserId>, UserId>() {
+                    @Override
+                    public UserId call(Response<UserId> userIdResponse) {
+                        if (!userIdResponse.isSuccessful()) {
+                            try {
+                                throw new RuntimeException(userIdResponse.errorBody().string());
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        return userIdResponse.body();
+                    }
+                });
+    }
+
+    private void updatePreferenceStore(AuthorizationAnswer answer) {
+        PreferencesHelper.storeCurrentToken(mContext, answer.getRefreshToken());
+        PreferencesHelper.storeAccessToken(mContext, answer.getAccessToken());
+    }
+
+    private Observable<UserId> checkErrorAndThrowException(Response<AuthorizationAnswer> response) {
+        UserLoginErrorInfo userLoginInfo;
+        Gson gson = new GsonBuilder().create();
+        try {
+            userLoginInfo = gson.fromJson(response.errorBody().string(), UserLoginErrorInfo.class);
+            if (userLoginInfo != null) {
+                checkInvalidGrantError(userLoginInfo);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        throw new RuntimeException("HTTP " + response.code());
+    }
+
+    private void checkInvalidGrantError(UserLoginErrorInfo userLoginInfo) {
+        if (userLoginInfo.getError() != null && userLoginInfo.getError().equals(UserLoginErrorInfo.ERROR_INVALID_GRANT)
+                && userLoginInfo.getErrorDescription() != null && userLoginInfo.getErrorDescription().equals(UserLoginErrorInfo.ERROR_DESCRIPTION_IS_LOCKED)) {
+            throw new RuntimeException("Please, continue registration");
+        }
+    }
+}

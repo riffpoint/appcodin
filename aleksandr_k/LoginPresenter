@@ -1,0 +1,28 @@
+public class EmailEntrancePresenter extends BasePresenter implements IEmailEntrancePresenter {
+
+    private final IEmailEntranceView mView;
+    private final EmailEntranceModel mModel;
+
+    public EmailEntrancePresenter(IEmailEntranceView view) {
+        super();
+        mView = view;
+        mModel = new EmailEntranceModel();
+    }
+
+    @Override
+    public void sendAuthorizeRequest(String email, String password) {
+        Subscription sub = mModel.sendAuthorizeRequest(email, password)
+                .subscribe(new Action1<UserId>() {
+                    @Override
+                    public void call(UserId id) {
+                        mView.authorizeResult(id);
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        mView.authorizeFailed(mContext.getString(R.string.error) + throwable.getMessage());
+                    }
+                });
+        addSubscription(sub);
+    }
+}
