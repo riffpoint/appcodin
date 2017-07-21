@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22D1BB171D129321002DE3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1BB161D129321002DE3C8 /* AppDelegate.swift */; };
+		22D1BB191D129321002DE3C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1BB181D129321002DE3C8 /* ViewController.swift */; };
+		22D1BB1C1D129321002DE3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D1BB1A1D129321002DE3C8 /* Main.storyboard */; };
+		22D1BB1E1D129321002DE3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D1BB1D1D129321002DE3C8 /* Assets.xcassets */; };
+		22D1BB211D129321002DE3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D1BB1F1D129321002DE3C8 /* LaunchScreen.storyboard */; };
+		23407DA891B80EBA2B0B78A8 /* Pods_AKSwiftAuth0Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD3B8A75ABA819973038F78 /* Pods_AKSwiftAuth0Test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22D1BB131D129321002DE3C8 /* AKSwiftAuth0Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKSwiftAuth0Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D1BB161D129321002DE3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22D1BB181D129321002DE3C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22D1BB1B1D129321002DE3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22D1BB1D1D129321002DE3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22D1BB201D129321002DE3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22D1BB221D129321002DE3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31CA1B9F935597A0A1EEE064 /* Pods-AKSwiftAuth0Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKSwiftAuth0Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKSwiftAuth0Test/Pods-AKSwiftAuth0Test.release.xcconfig"; sourceTree = "<group>"; };
+		9CC0013052A5DB1BE9AD907F /* Pods-AKSwiftAuth0Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKSwiftAuth0Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKSwiftAuth0Test/Pods-AKSwiftAuth0Test.debug.xcconfig"; sourceTree = "<group>"; };
+		DFD3B8A75ABA819973038F78 /* Pods_AKSwiftAuth0Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AKSwiftAuth0Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22D1BB101D129321002DE3C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23407DA891B80EBA2B0B78A8 /* Pods_AKSwiftAuth0Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		144F0F53025A14884FE35D51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0013052A5DB1BE9AD907F /* Pods-AKSwiftAuth0Test.debug.xcconfig */,
+				31CA1B9F935597A0A1EEE064 /* Pods-AKSwiftAuth0Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		22D1BB0A1D129321002DE3C8 = {
+			isa = PBXGroup;
+			children = (
+				22D1BB151D129321002DE3C8 /* AKSwiftAuth0Test */,
+				22D1BB141D129321002DE3C8 /* Products */,
+				144F0F53025A14884FE35D51 /* Pods */,
+				25AF4BA53424811835073853 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22D1BB141D129321002DE3C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22D1BB131D129321002DE3C8 /* AKSwiftAuth0Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22D1BB151D129321002DE3C8 /* AKSwiftAuth0Test */ = {
+			isa = PBXGroup;
+			children = (
+				22D1BB161D129321002DE3C8 /* AppDelegate.swift */,
+				22D1BB181D129321002DE3C8 /* ViewController.swift */,
+				22D1BB1A1D129321002DE3C8 /* Main.storyboard */,
+				22D1BB1D1D129321002DE3C8 /* Assets.xcassets */,
+				22D1BB1F1D129321002DE3C8 /* LaunchScreen.storyboard */,
+				22D1BB221D129321002DE3C8 /* Info.plist */,
+			);
+			path = AKSwiftAuth0Test;
+			sourceTree = "<group>";
+		};
+		25AF4BA53424811835073853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFD3B8A75ABA819973038F78 /* Pods_AKSwiftAuth0Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22D1BB121D129321002DE3C8 /* AKSwiftAuth0Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D1BB251D129321002DE3C8 /* Build configuration list for PBXNativeTarget "AKSwiftAuth0Test" */;
+			buildPhases = (
+				0AF7C50DA5EC9EC5D72E9060 /* Check Pods Manifest.lock */,
+				22D1BB0F1D129321002DE3C8 /* Sources */,
+				22D1BB101D129321002DE3C8 /* Frameworks */,
+				22D1BB111D129321002DE3C8 /* Resources */,
+				E6F82B2E12F8F3CDBCA60EEC /* Embed Pods Frameworks */,
+				0A4B977110587A20F54B78BC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AKSwiftAuth0Test;
+			productName = AKSwiftAuth0Test;
+			productReference = 22D1BB131D129321002DE3C8 /* AKSwiftAuth0Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22D1BB0B1D129321002DE3C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Akvelon;
+				TargetAttributes = {
+					22D1BB121D129321002DE3C8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 22D1BB0E1D129321002DE3C8 /* Build configuration list for PBXProject "AKSwiftAuth0Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22D1BB0A1D129321002DE3C8;
+			productRefGroup = 22D1BB141D129321002DE3C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22D1BB121D129321002DE3C8 /* AKSwiftAuth0Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22D1BB111D129321002DE3C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D1BB211D129321002DE3C8 /* LaunchScreen.storyboard in Resources */,
+				22D1BB1E1D129321002DE3C8 /* Assets.xcassets in Resources */,
+				22D1BB1C1D129321002DE3C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A4B977110587A20F54B78BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AKSwiftAuth0Test/Pods-AKSwiftAuth0Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0AF7C50DA5EC9EC5D72E9060 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F82B2E12F8F3CDBCA60EEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AKSwiftAuth0Test/Pods-AKSwiftAuth0Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22D1BB0F1D129321002DE3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D1BB191D129321002DE3C8 /* ViewController.swift in Sources */,
+				22D1BB171D129321002DE3C8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22D1BB1A1D129321002DE3C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D1BB1B1D129321002DE3C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22D1BB1F1D129321002DE3C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D1BB201D129321002DE3C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22D1BB231D129321002DE3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22D1BB241D129321002DE3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22D1BB261D129321002DE3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC0013052A5DB1BE9AD907F /* Pods-AKSwiftAuth0Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22D1BB271D129321002DE3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31CA1B9F935597A0A1EEE064 /* Pods-AKSwiftAuth0Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AKSwiftAuth0Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.AKSwiftAuth0Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D1BB0E1D129321002DE3C8 /* Build configuration list for PBXProject "AKSwiftAuth0Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D1BB231D129321002DE3C8 /* Debug */,
+				22D1BB241D129321002DE3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D1BB251D129321002DE3C8 /* Build configuration list for PBXNativeTarget "AKSwiftAuth0Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D1BB261D129321002DE3C8 /* Debug */,
+				22D1BB271D129321002DE3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22D1BB0B1D129321002DE3C8 /* Project object */;
+}
