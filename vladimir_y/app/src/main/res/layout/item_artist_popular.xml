@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/standard_offset_x0_5"
+    android:background="@drawable/rv_item_selector"
+    android:padding="@dimen/colored_gradient_padding">
+
+    <ImageView
+        android:id="@+id/iv_artist_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/description_artist_photo_txt"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:background="@drawable/artist_name_gradient_background"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_offset">
+
+        <TextView
+            android:id="@+id/tv_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="ArtistName" />
+
+        <TextView
+            android:id="@+id/tv_listeners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/item_artist_listeners_text_size"
+            tools:text="listeners" />
+    </LinearLayout>
+</FrameLayout>

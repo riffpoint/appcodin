@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/standard_offset_x0_5"
+    android:background="@drawable/rv_item_selector"
+    android:orientation="horizontal"
+    android:padding="@dimen/colored_gradient_padding">
+
+    <ImageView
+        android:id="@+id/iv_album_photo"
+        android:layout_width="@dimen/item_album_photo_size"
+        android:layout_height="@dimen/item_album_photo_size"
+        android:layout_gravity="center"
+        android:contentDescription="@string/description_album_photo_txt"
+        android:scaleType="centerCrop"
+        android:src="@drawable/no_image_placeholder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/album_gradient_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/standard_offset_x2"
+        android:paddingRight="@dimen/standard_offset_x2">
+
+        <TextView
+            android:id="@+id/tv_album_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/item_album_name_text_size"
+            android:textStyle="bold"
+            tools:text="AlbumName" />
+
+        <TextView
+            android:id="@+id/tv_plays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="plays" />
+    </LinearLayout>
+</LinearLayout>

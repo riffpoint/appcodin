@@ -1,0 +1,23 @@
+<resources>
+    <dimen name="standard_offset_x0_5">4dp</dimen>
+    <dimen name="standard_offset">8dp</dimen>
+    <dimen name="standard_offset_x2">16dp</dimen>
+    <dimen name="standard_offset_x4">32dp</dimen>
+
+    <dimen name="splash_progressbar_size">32dp</dimen>
+    <dimen name="spinner_progressbar_size">56dp</dimen>
+
+    <dimen name="colored_gradient_padding">2dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="top_artists_header_height">180dp</dimen>
+    <dimen name="artist_info_photo_height">300dp</dimen>
+    <dimen name="item_artist_listeners_text_size">12sp</dimen>
+
+    <dimen name="item_album_photo_size">100dp</dimen>
+    <dimen name="item_album_name_text_size">18sp</dimen>
+
+    <dimen name="dialog_btn_radius">12dp</dimen>
+    <dimen name="dialog_option_text_size">20sp</dimen>
+    <dimen name="dialog_location_option_height">56dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.rgand.x_prt.lastfmhits.activity.PopularArtistActivity">
+    <item
+        android:id="@+id/action_sort_names"
+        android:orderInCategory="100"
+        android:title="@string/sort_by_names_txt"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sort_playcount"
+        android:orderInCategory="100"
+        android:title="@string/sort_by_playcount_txt"
+        app:showAsAction="never" />
+</menu>

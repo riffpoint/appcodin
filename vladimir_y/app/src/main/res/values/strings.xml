@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">LastFM</string>
+
+    <string name="no_internet_message_txt">It seems that there is no internet connection. Please check the network status and try again.</string>
+
+    <string name="country_ukraine_txt">Ukraine</string>
+    <string name="country_georgia_txt">Georgia</string>
+    <string name="country_switzerland_txt">Switzerland</string>
+
+    <string name="description_artist_photo_txt">Artist Photo</string>
+    <string name="description_album_photo_txt">Album Photo</string>
+
+    <string name="listeners_suffix_txt">listeners</string>
+    <string name="plays_suffix_txt">plays</string>
+
+    <string name="sort_by_names_txt">Sort by Name</string>
+    <string name="sort_by_listeners_txt">Sort by Listeners</string>
+    <string name="sort_by_playcount_txt">Sort by Playcount</string>
+
+    <string name="unknown_txt">unknown</string>
+
+    <string name="retry_txt">Retry</string>
+    <string name="exit_txt">Exit</string>
+    <string name="ok_txt">OK</string>
+    <string name="offline_mode_txt">Offline mode. Check internet connection and refresh the screen.</string>
+    <string name="please_wait_txt">Please wait…</string>
+    <string name="nothing_to_show_txt">There are no saved data in the cache.\nYou must connect to the Internet to download the information you need.</string>
+</resources>

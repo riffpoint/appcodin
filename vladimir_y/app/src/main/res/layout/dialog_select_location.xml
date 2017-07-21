@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/standard_offset_x4"
+    android:paddingRight="@dimen/standard_offset_x4">
+
+    <TextView
+        android:id="@+id/tv_dialog_location_ukraine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_location_option_height"
+        android:layout_marginBottom="@dimen/standard_offset_x2"
+        android:background="@drawable/button_dialog_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/country_ukraine_txt"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dialog_option_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_dialog_location_georgia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_location_option_height"
+        android:layout_marginBottom="@dimen/standard_offset_x2"
+        android:background="@drawable/button_dialog_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/country_georgia_txt"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dialog_option_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_dialog_location_switzerland"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_location_option_height"
+        android:background="@drawable/button_dialog_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/country_switzerland_txt"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dialog_option_text_size"
+        android:textStyle="bold" />
+</LinearLayout>
